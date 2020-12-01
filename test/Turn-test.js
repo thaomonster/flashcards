@@ -12,4 +12,9 @@ describe('Turn', () => {
     const turn = new Turn('boolean', card);
     expect(Turn).to.be.a('function');
   });
+
+  it('should be an instance of Turn', () => {
+    const card = new Turn();
+    expect(turn).to.be.an.instanceof(Turn);
+  }); 
 });
