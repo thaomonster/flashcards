@@ -4,10 +4,11 @@ const Card = require('../src/Card');
 const Turn = require('../src/Turn');
 
 describe('Turn', () => {
-  const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-  const turn = new Turn('object', card);
+  const card = new Card(9, 'What does the callback function for find() return?', ['boolean', 'array', 'object'], 'boolean');
+  const turn = new Turn('boolean', card);
 
   it('should be a function', () => {
-    const turn = new Turn()
+    const turn = new Turn('boolean', card);
+    expect(Turn).to.be.a('function');
   });
 });
