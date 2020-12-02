@@ -1,7 +1,11 @@
 class Deck {
-  constructor() {
-    
-  }
+  constructor(card) {
+    this.card = card
+  };
+
+  countCards() {
+    return this.card.length;
+  };
 };
 
 
