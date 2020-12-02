@@ -26,4 +26,8 @@ describe('Round', () => {
   it('should be an instance of Round', () => {
     expect(round).to.be.an.instanceOf(Round);
   });
+
+  it('should return the current card', () => {
+    expect(round.returnCurrentCard()).to.equal(card1)
+  });
 });
