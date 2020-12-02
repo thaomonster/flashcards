@@ -5,8 +5,7 @@ const Card = require('../src/Card');
 const Turn = require('../src/Turn');
 
 describe('Turn', () => {
-  let card;
-  let turn;
+  let card, turn;
 
   beforeEach(() => {
      card = new Card(9, 'What does the callback function for find() return?', ['boolean', 'array', 'object'], 'boolean');
