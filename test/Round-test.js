@@ -10,9 +10,9 @@ describe('Round', () => {
   let card1, card2, card3, deck, turn, round;
   
   beforeEach(() => { 
-    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    card2 = new Card(2, 'What is a comma-separated list of related values?', ['array', 'object', 'function'], 'array');
-    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    card1 = new Card(1, 'What do we call when we assign variable declarations a default value of undefined while placing any functions directly in memory?', ['creation', 'execution', 'hoisting'], 'hoisting');
+    card2 = new Card(2, 'What is the phase where the interpreter sets aside some space in memory to store any variables and functions we might need to access?', ['creation phase', 'execution phase', 'hoisting'], 'creation phase');
+    card3 = new Card(3, 'What do we call when JavaScript executes one line at a time?', ['single-threaded', 'accessor method', 'top-bottom'], 'single-threaded');
     deck = new Deck([card1, card2, card3]);
     turn = new Turn();
     round = new Round(deck);
@@ -42,11 +42,11 @@ describe('Round', () => {
     round.returnCurrentCard();
     expect(round.currentCard).to.equal(card1);
     expect(round.currentTurn).to.equal(0);
-    round.takeTurn('object');    
+    round.takeTurn('hoisting');    
     round.returnCurrentCard();
     expect(round.currentCard).to.equal(card2);
     expect(round.currentTurn).to.equal(1);
-    round.takeTurn('array');
+    round.takeTurn('creation phase');
     round.returnCurrentCard();
     expect(round.currentCard).to.equal(card3);
     expect(round.currentTurn).to.equal(2);
@@ -56,26 +56,26 @@ describe('Round', () => {
     round.returnCurrentCard();
     expect(round.currentCard).to.equal(card1);
     expect(round.currentTurn).to.equal(0);
-    round.takeTurn('array')
+    round.takeTurn('execution')
     expect(round.incorrectGuesses).to.have.lengthOf(1)
   });
 
   it('should return a string telling the user if its correct or incorrect', () => {
-    expect(round.takeTurn('object')).to.equal('correct!');
+    expect(round.takeTurn('hoisting')).to.equal('correct!');
   });
 
   it('should calculate percentage of correct answers', () => {
-    round.takeTurn('object');
-    round.takeTurn('array');
-    round.takeTurn('mutator');
+    round.takeTurn('hoisting');
+    round.takeTurn('creation phase');
+    round.takeTurn('top-bottom');
 
     expect(round.calculatePercentCorrect()).to.equal(67);
   });
 
   it('should console log a string at the end of the round', () => {
-    round.takeTurn('object');
-    round.takeTurn('array');
-    round.takeTurn('mutator');
+    round.takeTurn('hoisting');
+    round.takeTurn('creation phase');
+    round.takeTurn('top-bottom');
     round.endRound();
 
     expect(round.endRound()).to.equal('** Round over! ** You answered 67% of the questions correctly!')
