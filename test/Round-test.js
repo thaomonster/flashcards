@@ -65,5 +65,11 @@ describe('Round', () => {
     expect(round.takeTurn('object')).to.equal('correct!');
   });
 
-  
+  it('should calculate percentage of correct answers', () => {
+    round.takeTurn('object');
+    round.takeTurn('array');
+    round.takeTurn('mutator');
+
+    expect(round.calculatePercentCorrect()).to.equal(67);
+  });
 });
