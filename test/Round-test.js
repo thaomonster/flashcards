@@ -16,7 +16,6 @@ describe('Round', () => {
     deck = new Deck([card1, card2, card3]);
     turn = new Turn();
     round = new Round(deck);
-    
   });
 
   it('should be a function', () => {
