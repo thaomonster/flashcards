@@ -30,4 +30,12 @@ describe('Round', () => {
   it('should return the current card', () => {
     expect(round.returnCurrentCard()).to.equal(card1)
   });
+
+  it('should keep track of the number of turns', () => {
+    expect(round.currentTurn).to.equal(0);
+    round.takeTurn();
+    expect(round.currentTurn).to.equal(1);
+    round.takeTurn();
+    expect(round.currentTurn).to.equal(2);
+  });
 });
