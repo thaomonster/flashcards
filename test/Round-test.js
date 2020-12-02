@@ -38,4 +38,26 @@ describe('Round', () => {
     round.takeTurn();
     expect(round.currentTurn).to.equal(2);
   });
+
+  it('should update the current card', () => {
+    round.returnCurrentCard();
+    expect(round.currentCard).to.equal(card1);
+    expect(round.currentTurn).to.equal(0);
+    round.takeTurn('object');    
+    round.returnCurrentCard();
+    expect(round.currentCard).to.equal(card2);
+    expect(round.currentTurn).to.equal(1);
+    round.takeTurn('array');
+    round.returnCurrentCard();
+    expect(round.currentCard).to.equal(card3);
+    expect(round.currentTurn).to.equal(2);
+  });
+
+  it('should keep track of incorrect guesses', () => {
+    round.returnCurrentCard();
+    expect(round.currentCard).to.equal(card1);
+    expect(round.currentTurn).to.equal(0);
+    round.takeTurn('array')
+    expect(round.incorrectGuesses).to.have.lengthOf(1)
+  });
 });
