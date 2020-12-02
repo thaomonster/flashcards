@@ -4,8 +4,12 @@ const util = require('./util');
 
 class Game {
   constructor() {
-    
+    this.currentRound = 0;
   };
+
+  startGame() {
+    
+  }
 
   printMessage(deck, round) {
       console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.

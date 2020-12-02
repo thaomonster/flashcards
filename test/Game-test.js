@@ -27,7 +27,9 @@ describe('Game', () => {
     expect(game).to.be.an.instanceOf(Game);
   });
 
-  // it('should be ablt to keep track of current round' () => {
+  it('should have currentRound default to be 0', () => {
+    expect(game.currentRound).to.equal(0);
+  });
 
-  // })
+  // it('should ')
 });
