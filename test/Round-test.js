@@ -60,4 +60,10 @@ describe('Round', () => {
     round.takeTurn('array')
     expect(round.incorrectGuesses).to.have.lengthOf(1)
   });
+
+  it('should return a string telling the user if its correct or incorrect', () => {
+    expect(round.takeTurn('object')).to.equal('correct!');
+  });
+
+  
 });

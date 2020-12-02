@@ -17,6 +17,8 @@ class Round {
     this.currentTurn++
 
     turn.evaluateGuess() ? null : this.incorrectGuesses.push(this.currentCard.id)
+
+    return turn.giveFeedback();
   };
 };
 
