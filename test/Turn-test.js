@@ -8,7 +8,7 @@ describe('Turn', () => {
   let card, turn;
 
   beforeEach(() => {
-    card = new Card(1, 'What do we call when we assign variable declarations a default value of undefined while placing any functions directly in memory?', ['creation', 'execution', 'hoisting'], 'hoisting');
+    card = new Card(1, 'Process of assigning variable declaration a default value of undefined?', ['creation', 'execution', 'hoisting'], 'hoisting');
     turn = new Turn('hoisting', card);
   });
 
@@ -21,7 +21,7 @@ describe('Turn', () => {
   });
 
   it('should return userGuess', () => {
-    expect(turn.returnGuess()).to.equal('hoisting')
+    expect(turn.returnGuess()).to.equal('hoisting');
   });
 
   it('should return current card', () => {
@@ -29,10 +29,10 @@ describe('Turn', () => {
   });
 
   it('should compare user guess to correctAnswer and return a boolean value', () => {
-    expect(turn.evaluateGuess()).to.equal(true)
+    expect(turn.evaluateGuess()).to.equal(true);
   });
 
   it('should return a string to tell the user their result', () => {
-    expect(turn.giveFeedback()).to.equal('correct!')
+    expect(turn.giveFeedback()).to.equal('correct!');
   });
 });

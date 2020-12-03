@@ -13,14 +13,14 @@ class Game {
 
   startGame() {
     const cards = prototypeQuestions.map(question => {
-      return new Card(question.id, question.question, question.answers, question.correctAnswer)
+      return new Card(question.id, question.question, question.answers, question.correctAnswer);
     });
     
     let deck = new Deck(cards);
     let round = new Round(deck);
 
     this.currentRound = round;
-    this.printMessage(deck, round);
+    this.printMessage(deck);
     this.printQuestion(round);
   }
 

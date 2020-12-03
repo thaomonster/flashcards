@@ -8,7 +8,7 @@ describe('Card', function() {
   let card;
 
   beforeEach(() => {
-    card = new Card(1, 'What do we call when we assign variable declarations a default value of undefined while placing any functions directly in memory?', ['creation', 'execution', 'hoisting'], 'hoisting');
+    card = new Card(1, 'Process of assigning variable declaration a default value of undefined?', ['creation', 'execution', 'hoisting'], 'hoisting');
   });
 
   it('should be a function', function() {
@@ -22,7 +22,7 @@ describe('Card', function() {
   }); 
 
   it('should store a question', function() {
-    expect(card.question).to.equal('What do we call when we assign variable declarations a default value of undefined while placing any functions directly in memory?');
+    expect(card.question).to.equal('Process of assigning variable declaration a default value of undefined?');
   });  
 
   it('should store a list of possible answers', function() {

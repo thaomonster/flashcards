@@ -9,7 +9,7 @@ describe('Round', () => {
   let card1, card2, card3, deck, round;
   
   beforeEach(() => { 
-    card1 = new Card(1, 'What do we call when we assign variable declarations a default value of undefined while placing any functions directly in memory?', ['creation', 'execution', 'hoisting'], 'hoisting');
+    card1 = new Card(1, 'Process of assigning variable declaration a default value of undefined?', ['creation', 'execution', 'hoisting'], 'hoisting');
     card2 = new Card(2, 'What is the phase where the interpreter sets aside some space in memory to store any variables and functions we might need to access?', ['creation phase', 'execution phase', 'hoisting'], 'creation phase');
     card3 = new Card(3, 'What do we call when JavaScript executes one line at a time?', ['single-threaded', 'accessor method', 'top-bottom'], 'single-threaded');
     deck = new Deck([card1, card2, card3]);
@@ -25,7 +25,7 @@ describe('Round', () => {
   });
 
   it('should return the current card', () => {
-    expect(round.returnCurrentCard()).to.equal(card1)
+    expect(round.returnCurrentCard()).to.equal(card1);
   });
 
   it('should keep track of the number of turns', () => {
@@ -54,8 +54,8 @@ describe('Round', () => {
     round.returnCurrentCard();
     expect(round.currentCard).to.equal(card1);
     expect(round.currentTurn).to.equal(0);
-    round.takeTurn('execution')
-    expect(round.incorrectGuesses).to.have.lengthOf(1)
+    round.takeTurn('execution');
+    expect(round.incorrectGuesses).to.have.lengthOf(1);
   });
 
   it('should return a string telling the user if its correct or incorrect', () => {
@@ -76,6 +76,6 @@ describe('Round', () => {
     round.takeTurn('top-bottom');
     round.endRound();
 
-    expect(round.endRound()).to.equal('** Round over! ** You answered 67% of the questions correctly!')
+    expect(round.endRound()).to.equal('** Round over! ** You answered 67% of the questions correctly!');
   });
 });
