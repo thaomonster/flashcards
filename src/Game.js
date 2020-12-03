@@ -13,7 +13,7 @@ class Game {
 
   startGame() {
     const cards = prototypeQuestions.map(question => {
-      return new Card(question.id, question.question, question.answers, question.correctAnswer)
+      return new Card(question.id, question.question, question.answers, question.correctAnswer);
     });
     
     let deck = new Deck(cards);

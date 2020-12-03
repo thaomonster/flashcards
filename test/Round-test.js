@@ -25,7 +25,7 @@ describe('Round', () => {
   });
 
   it('should return the current card', () => {
-    expect(round.returnCurrentCard()).to.equal(card1)
+    expect(round.returnCurrentCard()).to.equal(card1);
   });
 
   it('should keep track of the number of turns', () => {
@@ -54,8 +54,8 @@ describe('Round', () => {
     round.returnCurrentCard();
     expect(round.currentCard).to.equal(card1);
     expect(round.currentTurn).to.equal(0);
-    round.takeTurn('execution')
-    expect(round.incorrectGuesses).to.have.lengthOf(1)
+    round.takeTurn('execution');
+    expect(round.incorrectGuesses).to.have.lengthOf(1);
   });
 
   it('should return a string telling the user if its correct or incorrect', () => {
@@ -76,6 +76,6 @@ describe('Round', () => {
     round.takeTurn('top-bottom');
     round.endRound();
 
-    expect(round.endRound()).to.equal('** Round over! ** You answered 67% of the questions correctly!')
+    expect(round.endRound()).to.equal('** Round over! ** You answered 67% of the questions correctly!');
   });
 });
