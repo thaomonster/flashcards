@@ -2,7 +2,6 @@ const chai = require('chai');
 const expect = chai.expect;
 
 const Round = require('../src/Round');
-const Card = require('../src/Card');
 const Game = require('../src/Game');
 
 describe('Game', () => {
@@ -21,7 +20,7 @@ describe('Game', () => {
     expect(game).to.be.an.instanceOf(Game);
   });
 
-  it('currrent round should be defaulted to undefined before starting a game', () => {
+  it('current round should default to undefined before starting a game', () => {
     expect(game.currentRound).to.equal(undefined);
   });
 

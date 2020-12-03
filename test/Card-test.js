@@ -8,16 +8,16 @@ describe('Card', function() {
   let card;
 
   beforeEach(() => {
-     card = new Card(1, 'What do we call when we assign variable declarations a default value of undefined while placing any functions directly in memory?', ['creation', 'execution', 'hoisting'], 'hoisting');
+    card = new Card(1, 'What do we call when we assign variable declarations a default value of undefined while placing any functions directly in memory?', ['creation', 'execution', 'hoisting'], 'hoisting');
   });
 
   it('should be a function', function() {
-    const card = new Card();
+    card = new Card();
     expect(Card).to.be.a('function');
   });
 
   it('should be an instance of Card', function() {
-    const card = new Card();
+    card = new Card();
     expect(card).to.be.an.instanceof(Card);
   }); 
 
