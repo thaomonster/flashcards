@@ -21,6 +21,10 @@ describe('Game', () => {
     expect(game).to.be.an.instanceOf(Game);
   });
 
+  it('currrent round should be defaulted to undefined before starting a game', () => {
+    expect(game.currentRound).to.equal(undefined);
+  });
+
   it('should keep track of current round after game starts', () => {
 
     game.startGame();
