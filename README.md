@@ -1,21 +1,19 @@
-
-
 ---
 # Flashcards
 ###### Solo Project
 ---
 
 ## Project Overview
-The primary goal of [Flashcards](https://github.com/thaomonster/flashcards) is a simple CLI (Command-Line-Interface) game. The user will be able to see a question, choose one of the given options(index only), and a message will show to reveal if the answer was correct. When all questions are answered, the final score of correct percentage and duration will be displayed at the end of the round. As well as the index of the questions that was answered wrong so user can go back to review.([Project Specs](https://frontend.turing.io/projects/flash-cards.html)).
+The primary goal of Flashcards [Repo Link](https://github.com/thaomonster/flashcards) is a simple CLI (Command-Line-Interface) game. The user will be able to see a question, choose one of the given options(index only), and a message will show to reveal if the answer was correct. When all questions are answered, the final score of correct percentage and duration will be displayed at the end of the round. As well as the index of the questions that was answered wrong so user can go back to review.([Project Specs](https://frontend.turing.io/projects/flash-cards.html)).
 
 ## ScreenShots
 game start:
 
-![start game]()
+![start game](https://media.giphy.com/media/xyvio7MH8hUGFP1I11/giphy.gif)
 
 At the end of the game
 
-![end game]()
+![end game](https://media.giphy.com/media/d3MNlNPxpHCHexD3Yl/giphy.gif)
 
 ## Install/Setup Instructions
 To install the game, you will need to clone down this repo to your local desired directory. Run below command in your terminal:
