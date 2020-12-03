@@ -8,7 +8,7 @@ describe('Turn', () => {
   let card, turn;
 
   beforeEach(() => {
-    card = new Card(1, 'What do we call when we assign variable declarations a default value of undefined while placing any functions directly in memory?', ['creation', 'execution', 'hoisting'], 'hoisting');
+    card = new Card(1, 'Process of assigning variable declaration a default value of undefined?', ['creation', 'execution', 'hoisting'], 'hoisting');
     turn = new Turn('hoisting', card);
   });
 
