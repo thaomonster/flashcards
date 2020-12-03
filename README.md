@@ -13,7 +13,7 @@ game start:
 
 At the end of the game
 
-![end game](https://media.giphy.com/media/d3MNlNPxpHCHexD3Yl/giphy.gif)
+![end game](https://media.giphy.com/media/9S9roml4JfXYV9KYTT/giphy.gif)
 
 ## Install/Setup Instructions
 To install the game, you will need to clone down this repo to your local desired directory. Run below command in your terminal:
