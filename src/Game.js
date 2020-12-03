@@ -20,7 +20,7 @@ class Game {
     let round = new Round(deck);
 
     this.currentRound = round;
-    this.printMessage(deck, round);
+    this.printMessage(deck);
     this.printQuestion(round);
   }
 
