@@ -17,14 +17,14 @@ describe('Game', () => {
     expect(Game).to.be.a('function');
   });
 
-  it('should be an instance of Round', () => {
+  it('should be an instance of Game', () => {
     expect(game).to.be.an.instanceOf(Game);
   });
 
-  it('shoulkd keep track of current round after game starts', () => {
+  it('should keep track of current round after game starts', () => {
 
     game.startGame();
 
-    expect(game.currentRound).to.equal(1);
+    expect(game.currentRound).to.be.an.instanceOf(Round);
   });
 });
